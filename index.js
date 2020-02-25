@@ -295,14 +295,12 @@ function counterMaker() {
 */
 function counterMakerWithLimit(limit) {
   /* CODE HERE */
-  let count = 0
+  let count = -1
   function counter() {
-    if(count <= limit){
-      return count++
-    }else{
-      count = 1
-      return count
+    if (count === limit) {
+      count = -1;
     }
+    return ++count
   }
   return counter
 }
